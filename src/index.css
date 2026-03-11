@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 15% 12%;
+    --foreground: 40 30% 92%;
+
+    --card: 30 12% 16%;
+    --card-foreground: 40 30% 92%;
+
+    --popover: 30 12% 16%;
+    --popover-foreground: 40 30% 92%;
+
+    --primary: 40 65% 65%;
+    --primary-foreground: 30 15% 10%;
+
+    --secondary: 30 10% 20%;
+    --secondary-foreground: 40 25% 85%;
+
+    --muted: 30 8% 25%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 40 65% 65%;
+    --accent-foreground: 30 15% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 25% 25%;
+    --input: 30 10% 20%;
+    --ring: 40 65% 65%;
+
+    --radius: 0.5rem;
+
+    --gold: 40 65% 65%;
+    --gold-light: 40 75% 78%;
+    --gold-dark: 40 50% 42%;
+    --cream: 38 40% 93%;
+
+    font-family: 'Lora', serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-body {
+    font-family: 'Lora', serif;
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .text-gold-light {
+    color: hsl(var(--gold-light));
+  }
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.3);
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+}
